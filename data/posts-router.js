@@ -4,7 +4,11 @@ const Posts = require('./db.js');
 
 const router = express.Router();
 
+const cors = require('cors');
+
 router.use(express.json());
+
+router.use(cors());
 
 // GET ALL POSTS
 router.get('/', async (req, res) => {
